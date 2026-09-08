@@ -4,47 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The music is a invisble engine in our lives</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav>
+    <nav id="bar">
         <ul>
-            <caption><span><img src="/icons/headphones.png" alt="headphones png logo" whith="20" height="20">Header logo </span></caption>
-            <li><span><a href=#main_title>Home</a></span></li>
-            <li><span><a href=#secondary_title>About</a></span< /li>
-            <li><span><a href="contact.html">Contact</a></span< /li>
+            <caption><span><img src="/icons/headphones.png" alt="headphones png logo" whith="20" height="20">Header logo
+                </span></caption>
+            <li><span><a href=#main_title>The music</a></span></li>
+            <li><span><a href=#secondary_title>This is our type of party</a></span< /li>
+            <li><span><a href=#footer>Information</a></span< /li>
         </ul>
     </nav>
     <div>
-        <h1 id="main_title"> This website is awesome </h1>
+        <h1 id="main_title"> The music: <em>as our invisble engine in live</em> </h1>
         <h6>This website has some subtext that goes here the main title,its smallet font ant the color lower contrast
         </h6>
         <button>Sign up</button>
-        <aside><img src="/images/djconsole.jpg" alt="disk jokey console" width="600" height="283"></aside>
+
+        <aside>
+            <figure><video nonmute autoplay loop width="600">
+                    <source src="videos/deejay.mp4" type="video/mp4">
+                </video>
+
+            </figure>
+            <audio loop autoplay id="music">
+                <source src="audios/bombinsound-dubstep-version-3-537867.mp3" type="audio/mp3">
+            </audio>
+            <button onclick="document.getElementById('music').pause()">
+                Stop Music
+            </button>
+            <button onclick="document.getElementById('music').play()">
+                Play Music
+            </button>
+
+            <script>
+                document.querySelector("#music").volume = 0.05;
+            </script>
+        </aside>
+
     </div>
     <div>
-        <h2 id="secondary_title">Some random information</h2>
-        <img src="" alt="" width="600" height="283">
-        <img src="" alt="" width="600" height="283">
-        <img src="" alt="" width="600" height="283">
-        <img src="" alt="" width="600" height="283">
+        <h2 id="secondary_title">This is our type of party</h2>
+        <figure>
+            <img src="/images/coupledance.jpg" alt="a couple dancing in a disco" width="258" height="303">
+            <figcaption>Dance with someone</figcaption>
+        </figure>
+
+        <figure>
+            <img src="/images/dancebythespotligth.jpg" alt="caucasian girl dancing in the spotligth" width="258"
+                height="303">
+            <figcaption>If you rather dance alone </figcaption>
+        </figure>
+
+        <figure>
+            <img src="/images/group-celebration.jpg" alt="group of friends dancing in a discotek" width="258"
+                height="303">
+            <figcaption>Enjoy the good times together!</figcaption>
+        </figure>
+
+        <figure>
+            <img src="/images/hanging-out.jpg" alt="three male friends playing arround with the disk jokey console"
+                width="258" height="303">
+            <figcaption>Be one with the music tonight</figcaption>
+        </figure>
     </div>
     <div>
         <blockquote>
             This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe
             people will actually read it. Who knows? All I know is that it looks nice.
-            <br> <span><cite>-Thor, God of Thunder</cite></span>
+            <br> <span><b><cite>-Thor, God of Thunder</cite></b></span>
         </blockquote>
     </div>
     <div>
         <div>
-            <h2>Call to action! It's time!</h2>
+            <h3>Call to action! It's time!</h3>
             <p>Sign up for our product by clicking that button right over there!</p>
         </div>
         <a href="#">Sign up</a>
     </div>
-    <footer>
+    <footer id="footer">
         <p> Copyrigth &copy; The Odin Project 2021</p>
         <p>Made enterely by <a href="https://github.com/Maurux01" alt="github of Maurux01">Maurux01</a></p>
     </footer>

@@ -1,13 +1,14 @@
 # landing-page-theodinproject
 Landing page for the odin project guideline
 
+https://www.theodinproject.com/lessons/foundations-landing-page#assignment
+
 # Preview given for reference 
 
 ![Webpage-prev](images/preview.png)
 
 
 # Assignment
-# Landing Page Project
 
 [**Download the full design image**](https://cdn.statically.io/gh/TheOdinProject/curriculum/81a5d553f4073e593d23a6ab00d50eef8620796d/foundations/html_css/project/imgs/01.png) and take a look at what you’re going to be creating.
 
@@ -97,3 +98,6 @@ To share your website with others, you’ll need to **deploy it using GitHub Pag
 
 ## All icons were taken from
 [Magnific](https://www.magnific.com/icon/listen_2781881#fromView=search&page=1&position=11&uuid=3d043f3f-9e61-4981-b8d7-88b413100765)
+
+## All song were taken from
+[Pixabay](https://pixabay.com/es/sound-effects/musical-dubstep-version-3-537867/)
