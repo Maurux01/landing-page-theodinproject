@@ -91,3 +91,9 @@ Some fonts, colors and sizes are as follows (feel free to use your own if you wi
 
 To share your website with others, you’ll need to **deploy it using GitHub Pages**.
 
+
+## All images were taken from
+[Magnific](https://www.magnific.com/serie/113183497#from_element=series_block)
+
+## All icons were taken from
+[Magnific](https://www.magnific.com/icon/listen_2781881#fromView=search&page=1&position=11&uuid=3d043f3f-9e61-4981-b8d7-88b413100765)
