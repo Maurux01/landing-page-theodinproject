@@ -93,11 +93,12 @@ Some fonts, colors and sizes are as follows (feel free to use your own if you wi
 To share your website with others, you’ll need to **deploy it using GitHub Pages**.
 
 
-## All images were taken from
-[Magnific](https://www.magnific.com/serie/113183497#from_element=series_block)
+## All media sources ↓
+[Images-Magnific](https://www.magnific.com/serie/113183497#from_element=series_block) 
 
-## All icons were taken from
-[Magnific](https://www.magnific.com/icon/listen_2781881#fromView=search&page=1&position=11&uuid=3d043f3f-9e61-4981-b8d7-88b413100765)
+[video-Magnific](https://www.magnific.com/free-video/dj-disco_1711514#fromView=resource_detail&position=1&uuid=0a0e409b-0545-40f8-b54e-6eb4cf8a6763&track=ais_hybrid&from_element=cross_selling__video) 
 
-## All song were taken from
-[Pixabay](https://pixabay.com/es/sound-effects/musical-dubstep-version-3-537867/)
+[Icons-Magnific](https://www.magnific.com/icon/listen_2781881#fromView=search&page=1&position=11&uuid=3d043f3f-9e61-4981-b8d7-88b413100765)
+
+[Song-Pixabay](https://pixabay.com/es/sound-effects/musical-dubstep-version-3-537867/)
+
