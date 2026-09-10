@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The music is a invisble engine in our lives</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="back">
     <nav id="bar">
         <ul>
-            <caption><span><img id="logo" src="/icons/headphones.png" alt="headphones png logo" whith="20" height="20">Musi-k
+            <caption><span id="brand"><img id="logo" src="icons/headphones.png" alt="headphones png logo" width="20"
+                        height="20">Musi-k
                 </span></caption>
             <li class="listel"><span><a href=#main_title>The music</a></span></li>
             <li class="listel"></li><span><a href=#secondary_title>This is our type of party</a></span></li>
@@ -19,17 +23,26 @@
         </ul>
     </nav>
     <div id="block1">
-        <h1 id="main_title"> The music: <em>as our invisble engine in live</em> </h1>
-        <p>Music is more than just sounds and melodies; it is an invisible engine that moves us through life. It can change our mood, bring people together, inspire creativity, and help us express emotions that words cannot describe. From the rhythm that gives us energy to the melody that brings back a memory, music is always present in our lives, shaping our experiences and connecting us with others. If you believe in the power of music and want to be part of something creative and meaningful, join our music team and let’s create something amazing together </p>
-       <br>
+        <div class="hero-text">
+            <h1 id="main_title"> The music: <em>as our invisble engine in live</em> </h1>
+            <p>Music is more than just sounds and melodies; it is an invisible engine that moves us through life. It can
+                change our mood, bring people together, inspire creativity, and help us express emotions that words cannot
+                describe. From the rhythm that gives us energy to the melody that brings back a memory, music is always
+                present in our lives, shaping our experiences and connecting us with others. If you believe in the power of
+                music and want to be part of something creative and meaningful, join our music team and let's create
+                something amazing together </p>
+            <br>
             <button>Sign up</button>
+        </div>
 
-        <aside>
-            <figure id="video"><video nonmute autoplay loop width="600">
+        <aside class="hero-media">
+            <figure id="video"><video id="hero-video" autoplay muted loop playsinline preload="metadata" controls
+                    width="600" poster="images/djconsole-poster.jpg">
                     <source src="videos/deejay.mp4" type="video/mp4">
+                    Tu navegador no soporta video HTML5.
                 </video>
             </figure>
-            <audio  loop autoplay id="music">
+            <audio loop autoplay id="music">
                 <source src="audios/bombinsound-dubstep-version-3-537867.mp3" type="audio/mp3">
             </audio>
             <button onclick="document.getElementById('music').pause()">
@@ -41,6 +54,15 @@
 
             <script>
                 document.querySelector("#music").volume = 0.05;
+                // Intenta autoplay del video sin romper si el navegador lo bloquea
+                // (con muted + playsinline debería permitirlo; si no, quedan los controls).
+                var heroVideo = document.getElementById('hero-video');
+                if (heroVideo) {
+                    var playPromise = heroVideo.play();
+                    if (playPromise && playPromise.catch) {
+                        playPromise.catch(function () { /* autoplay bloqueado: el usuario usa controls */ });
+                    }
+                }
             </script>
         </aside>
 
@@ -48,42 +70,42 @@
     <div id="block2">
         <h2 id="secondary_title">This is our type of party</h2>
         <figure class="photo">
-            <img src="/images/coupledance.jpg" alt="a couple dancing in a disco" width="258" height="303">
+            <img src="images/coupledance.jpg" alt="a couple dancing in a disco" width="258" height="303">
             <figcaption class="photo_capt">Dance with someone</figcaption>
         </figure>
 
         <figure class="photo">
-            <img src="/images/dancebythespotligth.jpg" alt="caucasian girl dancing in the spotligth" width="258"
+            <img src="images/dancebythespotligth.jpg" alt="caucasian girl dancing in the spotligth" width="258"
                 height="303">
-            <figcaption  class="photo_capt">If you rather dance alone </figcaption>
+            <figcaption class="photo_capt">If you rather dance alone </figcaption>
         </figure>
 
         <figure class="photo">
-            <img src="/images/group-celebration.jpg" alt="group of friends dancing in a discotek" width="258"
+            <img src="images/group-celebration.jpg" alt="group of friends dancing in a discotek" width="258"
                 height="303">
-            <figcaption  class="photo_capt">Enjoy the good times together!</figcaption>
+            <figcaption class="photo_capt">Enjoy the good times together!</figcaption>
         </figure>
 
         <figure class="photo">
-            <img src="/images/hanging-out.jpg" alt="three male friends playing arround with the disk jokey console"
+            <img src="images/hanging-out.jpg" alt="three male friends playing arround with the disk jokey console"
                 width="258" height="303">
-            <figcaption  class="photo_capt">Be one with the music tonight</figcaption>
+            <figcaption class="photo_capt">Be one with the music tonight</figcaption>
         </figure>
     </div>
     <div id="quote">
         <blockquote>
-    “Music gives a soul to the universe, wings to the mind, flight to the
-    imagination, and life to everything. It is a language that speaks to the
-    heart when words are not enough, connecting people across cultures,
-    generations, and emotions.” <br>
-   <span> <cite>— Inspired by Plato</cite></span>
-</blockquote>
+            “Music gives a soul to the universe, wings to the mind, flight to the
+            imagination, and life to everything. It is a language that speaks to the
+            heart when words are not enough, connecting people across cultures,
+            generations, and emotions.” <br>
+            <span> <cite>— Inspired by Plato</cite></span>
+        </blockquote>
     </div>
     <div>
         <div id="block3">
             <h3>Call to action! It's time!</h3>
             <p>Sign up for our product by clicking that button right over there!</p>
-        <a href="#">Sign up</a>
+            <a href="#">Sign up</a>
         </div>
     </div>
     <footer id="footer">
@@ -91,7 +113,4 @@
         <p>Made enterely by <a href="https://github.com/Maurux01" alt="github of Maurux01">Maurux01</a></p>
     </footer>
 </body>
-
-
-
 </html>
