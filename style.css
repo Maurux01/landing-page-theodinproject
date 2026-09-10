@@ -127,6 +127,13 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+#music-status {
+    font-size: 14px;
+    color: #e5e7eb;
+    min-height: 1.2em;
+    margin-top: 8px;
+}
+
 #block2 {
     padding: 50px;
     text-align: center;

@@ -14,12 +14,12 @@
 <body id="back">
     <nav id="bar">
         <ul>
-            <caption><span id="brand"><img id="logo" src="icons/headphones.png" alt="headphones png logo" width="20"
+            <li class="listel brand-item"><span id="brand"><img id="logo" src="icons/headphones.png" alt="headphones png logo" width="20"
                         height="20">Musi-k
-                </span></caption>
-            <li class="listel"><span><a href=#main_title>The music</a></span></li>
-            <li class="listel"></li><span><a href=#secondary_title>This is our type of party</a></span></li>
-            <li class="listel"></li><span><a href=#footer>Information</a></span></li>
+                </span></li>
+            <li class="listel"><span><a href="#main_title">The music</a></span></li>
+            <li class="listel"><span><a href="#secondary_title">This is our type of party</a></span></li>
+            <li class="listel"><span><a href="#footer">Information</a></span></li>
         </ul>
     </nav>
     <div id="block1">
@@ -37,23 +37,51 @@
 
         <aside class="hero-media">
             <figure id="video"><video id="hero-video" autoplay muted loop playsinline preload="metadata" controls
-                    width="600" poster="images/djconsole-poster.jpg">
+                    width="600" poster="images/preview_vid.jpeg_0001.jpg">
                     <source src="videos/deejay.mp4" type="video/mp4">
                     Tu navegador no soporta video HTML5.
                 </video>
             </figure>
-            <audio loop autoplay id="music">
+            <audio loop preload="none" id="music">
                 <source src="audios/bombinsound-dubstep-version-3-537867.mp3" type="audio/mp3">
             </audio>
-            <button onclick="document.getElementById('music').pause()">
+            <button id="btn-stop-music">
                 Stop Music
             </button>
-            <button onclick="document.getElementById('music').play()">
+            <button id="btn-play-music">
                 Play Music
             </button>
+            <p id="music-status" role="status"></p>
 
             <script>
-                document.querySelector("#music").volume = 0.05;
+                // El audio CON sonido no puede hacer autoplay: el navegador lo bloquea
+                // hasta que el usuario interactúe con la página. Por eso se inicia
+                // con un clic en "Play Music" (o con el primer clic en la página).
+                var musicEl = document.getElementById('music');
+                musicEl.volume = 0.05;
+                var musicStatus = document.getElementById('music-status');
+                function setMusicStatus(msg) {
+                    if (musicStatus) { musicStatus.textContent = msg; }
+                }
+                function playMusic() {
+                    var p = musicEl.play();
+                    if (p && p.catch) {
+                        p.then(function () { setMusicStatus('Reproduciendo música…'); })
+                         .catch(function () { setMusicStatus('Pulsa "Play Music" para activar el sonido (el navegador bloquea el autoplay con sonido).'); });
+                    }
+                }
+                function stopMusic() {
+                    musicEl.pause();
+                    setMusicStatus('Música en pausa.');
+                }
+                document.getElementById('btn-play-music').addEventListener('click', playMusic);
+                document.getElementById('btn-stop-music').addEventListener('click', stopMusic);
+                // Habilita el audio con el primer clic/tap en cualquier parte (gesto del usuario).
+                function enableMusicOnFirstGesture() {
+                    playMusic();
+                    document.removeEventListener('click', enableMusicOnFirstGesture);
+                }
+                document.addEventListener('click', enableMusicOnFirstGesture);
                 // Intenta autoplay del video sin romper si el navegador lo bloquea
                 // (con muted + playsinline debería permitirlo; si no, quedan los controls).
                 var heroVideo = document.getElementById('hero-video');
@@ -70,25 +98,25 @@
     <div id="block2">
         <h2 id="secondary_title">This is our type of party</h2>
         <figure class="photo">
-            <img src="images/coupledance.jpg" alt="a couple dancing in a disco" width="258" height="303">
+            <img src="images/coupledance.jpg" alt="a couple dancing in a disco" width="258" height="303" loading="lazy" decoding="async">
             <figcaption class="photo_capt">Dance with someone</figcaption>
         </figure>
 
         <figure class="photo">
             <img src="images/dancebythespotligth.jpg" alt="caucasian girl dancing in the spotligth" width="258"
-                height="303">
+                height="303" loading="lazy" decoding="async">
             <figcaption class="photo_capt">If you rather dance alone </figcaption>
         </figure>
 
         <figure class="photo">
             <img src="images/group-celebration.jpg" alt="group of friends dancing in a discotek" width="258"
-                height="303">
+                height="303" loading="lazy" decoding="async">
             <figcaption class="photo_capt">Enjoy the good times together!</figcaption>
         </figure>
 
         <figure class="photo">
             <img src="images/hanging-out.jpg" alt="three male friends playing arround with the disk jokey console"
-                width="258" height="303">
+                width="258" height="303" loading="lazy" decoding="async">
             <figcaption class="photo_capt">Be one with the music tonight</figcaption>
         </figure>
     </div>
