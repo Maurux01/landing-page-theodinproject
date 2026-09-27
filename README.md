@@ -1,9 +1,12 @@
 # landing-page-theodinproject
+## Preview
+<img width="1839" height="962" alt="imagen" src="https://github.com/user-attachments/assets/821db796-f886-4f36-a3e2-15b2ceb81605" />
+
 Landing page for the odin project guideline
 
 https://www.theodinproject.com/lessons/foundations-landing-page#assignment
 
-# Preview given for reference 
+# Given for reference 
 
 ![Webpage-prev](images/preview.png)
 
